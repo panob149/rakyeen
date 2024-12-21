@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+<meta charset="utf-8"> 
+<head>
+	<title>เป็นแฟนกันไหม</title>
+</head>  
+    <style type="text/css">  
+        #main {
+        	text-align: center;
+        	padding-top: 50px;
+        }
+        #reject {
+    	    position: relative;
+    	    left: 0;
+    	    top: 0;
+    	    transition: all .1s ease-in-out;
+    	    -webkit-transition: all .1s ease-in-out;
+    	    -moz-transition: all .1s ease-in-out;
+    	    -o-transition: all .1s ease-in-out;
+        }
+    </style>
+<body>
+    
+    <div id="main">
+    	<h1>เป็นแฟนกันมั้ย :D</h1>
+    	<button id="accept">ตกลง</button>
+    	<button id="reject">ไม่เอา</button>
+    </div>
+
+        <script type="text/javascript">
+        	document.getElementById("accept").addEventListener("click", function(event) { 
+        		alert('เย้ :D รักไอยีนที่สุด');
+            });
+
+            document.getElementById("reject").addEventListener("click", function(event) {
+            	var random_x = randomNumber(0, 200);
+            	var random_y = randomNumber(0, 200);
+
+            	this.style.position = "relative";
+            	this.style.left = random_x + "px";
+            	this.style.top = random_y + "px";
+            });
+
+            function randomNumber(min, max) {
+            	return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+        </script>
+
+</body>
